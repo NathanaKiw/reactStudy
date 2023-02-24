@@ -1,34 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { useState } from "react"
+import { Tweet } from "./components/Tweet"
 import './App.css'
+import { AppRoutes } from "./Routes"
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+  return(
+    <AppRoutes/>
   )
+
+
+  // const [tweets, setTweets] = useState<string[]>([
+  //   'Tweet 1',
+  //   'Tweet 2',
+  //   'Tweet 3',
+  //   'Tweet 4',
+  // ])
+
+  // function CreateTweet(){
+  //   let index = tweets.length
+  //   setTweets([...tweets,`Tweet ${index}`])
+  // }
+  // return (
+  //   <div>
+  //     {tweets.map((tweet, index) => {
+  //       return <Tweet key={index} text={tweet}/>
+  //     })}
+  //     <button onClick={CreateTweet}>Adicionar tweet</button>
+  //   </div>
+  // )
 }
 
 export default App
